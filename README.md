@@ -92,31 +92,40 @@ const open = require('open');
     .then(image_link => {
         open(image_link);
     })
-    .catch(e => console.log(`Yikes! Hit an error:\n${e}`))
+    .catch(e => {
+        console.log(`Yikes! Hit an error:\n${e}`)
+    })
 )
 ```
 
-**Example 2:** Using a `config.ini` file to generate an image.
+**Example 2:** Using a `config.ini` file to generate an image and logging it to the console with a callback arguement.
 
 ```js
 const scrapegen = require('scrapegen');
 
 async function getImage() {
 
-    let image_link = await scrapegen.generate_from_configini('./custom_config.ini', ( link => console.log(`Generated Image: ${link}`)) );
+    await scrapegen.generate_from_configini('./custom_config.ini', ( link => console.log(`Generated Image: ${link}`)) );
 
 }
 
+console.log("Generating image...")
 ( async () => await getImage() )()
 
 ```
 
+<br>
+
 ## Results:
+
+<br>
 
 ![Emma watson animated](https://i.imgur.com/41qKdqt.jpg)
 ![Emma watson animated](https://i.imgur.com/L7tLkpg.jpg)
 ![Mona Lisa Cyberpunk](https://i.imgur.com/bIVBJKW.png)
 ![Japanese girl in pink sweater](https://i.imgur.com/G3YPhp8.jpg)
+
+<br>
 
 ## Dependencies:
 
