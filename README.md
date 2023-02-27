@@ -81,7 +81,6 @@ const open = require('open');
     await generate({
 
         prompt: `a cyberpunk painting of a cyberpunk monalisa wearing cyberpunk intricate streetwear, , woman with long cyberpunk hair and a smile on her face and neon tattoos, with a green background and a blue cyberpunk city, volumetric lighting, inceoglu dragan bibin hans thoma greg rutkowski alexandros pyromallis nekro rene margitte illustrated, fine details, realistic shaded, 4k, hyper detailed, beautiful, detailed portrait, cell shaded, 4 k, vivid colours, concept art, by wlop, ilya kuvshinov, artgerm, krenz cushart, greg rutkowski, pixiv. cinematic dramatic atmosphere, sharp focus, volumetric lighting, cinematic lighting, studio quality`,
-
         model: 'Quantum (v2)',
         aspect_ratio: 'Portrait',
         quality: 'High',
@@ -97,14 +96,14 @@ const open = require('open');
 )
 ```
 
-**Example 2:** Using the built-in sample `config.ini` file to generate an image.
+**Example 2:** Using a `config.ini` file to generate an image.
 
 ```js
 const scrapegen = require('scrapegen');
 
 async function getImage() {
 
-    let image_link = await scrapegen.generate_from_configini('./config.ini', ( link => console.log(`Generated Image: ${link}`)) );
+    let image_link = await scrapegen.generate_from_configini('./custom_config.ini', ( link => console.log(`Generated Image: ${link}`)) );
 
 }
 
