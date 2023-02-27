@@ -62,7 +62,3 @@ follow_model_style = 'false'
 
 # true
 # false
-
-[Procedure]
-image_link = 'Open Link'
-; Change this to 'Download Link' to download the image, 'Open Link' to open the image in your default browser, 'Return Link' to return the link.

@@ -1,6 +1,6 @@
 {
   "name": "scrapegen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A webscraper for a deep dream generator website for unlimited free AI images :)",
   "main": "scrapegen.js",
   "scripts": {
