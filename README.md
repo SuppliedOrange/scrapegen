@@ -19,7 +19,7 @@ A webscraper that generates a fake account on deepdreamgenerator.com and uses th
 
 ## All possible settings/models/options etc:
 
-It's all in  `config.ini.example` :)
+It's all in  [`config.ini.example`](https://github.com/SuppliedOrange/scrapegen/blob/main/config.ini.example) :)
 
 <br>
 
@@ -111,6 +111,13 @@ async function getImage() {
 ( async () => await getImage() )()
 
 ```
+
+## Results:
+
+![Emma watson animated](https://i.imgur.com/41qKdqt.jpg)
+![Emma watson animated](https://i.imgur.com/L7tLkpg.jpg)
+![Mona Lisa Cyberpunk](https://i.imgur.com/bIVBJKW.png)
+![Japanese girl in pink sweater](https://i.imgur.com/G3YPhp8.jpg)
 
 ## Dependencies:
 
