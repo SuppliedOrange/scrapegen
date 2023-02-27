@@ -82,7 +82,7 @@ const open = require('open');
 
         prompt: `a cyberpunk painting of a cyberpunk monalisa wearing cyberpunk intricate streetwear, , woman with long cyberpunk hair and a smile on her face and neon tattoos, with a green background and a blue cyberpunk city, volumetric lighting, inceoglu dragan bibin hans thoma greg rutkowski alexandros pyromallis nekro rene margitte illustrated, fine details, realistic shaded, 4k, hyper detailed, beautiful, detailed portrait, cell shaded, 4 k, vivid colours, concept art, by wlop, ilya kuvshinov, artgerm, krenz cushart, greg rutkowski, pixiv. cinematic dramatic atmosphere, sharp focus, volumetric lighting, cinematic lighting, studio quality`,
 
-        model: 'Fantasy',
+        model: 'Quantum (v2)',
         aspect_ratio: 'Portrait',
         quality: 'High',
         negative_prompt: `cartoon, bad art, bad artist, mutated`,
