@@ -195,14 +195,14 @@ const generate_image = (async (generation) => {
                 document.getElementsByClassName('submit generator-submit btn btn-orange')[0].click()
             } catch (e) { throw 'Hit an error while attempting to click the button that generates the image, did you select High quality with 2MP upscaling?'}
 
-    }, generation)
+    }, generation).catch(e => console.log(`scrapegen: ${e}`))
 
     await page.waitForSelector('.img-responsive', {timeout: 0}); // Wait until we get the image
     let image_link = await page.evaluate( async () => { return document.querySelector('.img-responsive').src } ) // After getting the image, 
 
     // console.log(image_link);
 
-    await browser.close();
+    // await browser.close();
 
     return image_link
 

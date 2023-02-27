@@ -41,7 +41,7 @@ scrapegen.generate({
     upscale_and_enhance: '1MP',
     follow_model_style: 'true'
 
-}, callback: (link => console.log(`Generated image: ${link}`) ))
+}, callback = (link => console.log(`Generated image: ${link}`) ))
 
 ```
 
@@ -50,9 +50,7 @@ An asynchronous function that generates an image based on a prompt from a config
 
 ```js
 async function getImage() {
-
-    let image_link = await scrapegen.generate_from_configini('path/to/config.ini', ( link => console.log(`Generated Image: ${link}`)) );
-
+    await scrapegen.generate_from_configini('path/to/config.ini', ( link => console.log(`Generated Image: ${link}`)) );
 }
 
 ( async () => await getImage() )()
@@ -78,7 +76,7 @@ const scrapegen = require('scrapegen');
 const open = require('open');
 
 (async () =>
-    await generate({
+    await scrapegen.generate({
 
         prompt: `a cyberpunk painting of a cyberpunk monalisa wearing cyberpunk intricate streetwear, , woman with long cyberpunk hair and a smile on her face and neon tattoos, with a green background and a blue cyberpunk city, volumetric lighting, inceoglu dragan bibin hans thoma greg rutkowski alexandros pyromallis nekro rene margitte illustrated, fine details, realistic shaded, 4k, hyper detailed, beautiful, detailed portrait, cell shaded, 4 k, vivid colours, concept art, by wlop, ilya kuvshinov, artgerm, krenz cushart, greg rutkowski, pixiv. cinematic dramatic atmosphere, sharp focus, volumetric lighting, cinematic lighting, studio quality`,
         model: 'Quantum (v2)',
@@ -95,7 +93,7 @@ const open = require('open');
     .catch(e => {
         console.log(`Yikes! Hit an error:\n${e}`)
     })
-)
+)()
 ```
 
 **Example 2:** Using a `config.ini` file to generate an image and logging it to the console with a callback arguement.
