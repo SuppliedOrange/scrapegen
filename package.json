@@ -1,7 +1,7 @@
 {
   "name": "scrapegen",
   "version": "1.0.72",
-  "description": "A webscraper for a deep dream generator website for unlimited free AI images :)",
+  "description": "A webscraper for a deep dream generator website for unlimited free text2img conversions :)",
   "main": "scrapegen.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
