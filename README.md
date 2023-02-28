@@ -46,7 +46,7 @@ scrapegen.generate({
 ```
 
 ### `.generate_from_ configini( path_to_config.ini, callback (optional) )`
-An asynchronous function that generates an image based on a prompt from a config.ini file. The format for the config.ini file is provided in `config.ini.example`.
+An asynchronous function like the one above that generates an image based on a prompt from a config.ini file. The format for the config.ini file is provided in `config.ini.example`.
 
 ```js
 async function getImage() {
@@ -59,7 +59,7 @@ async function getImage() {
 ### ` .exampleData `
 Returns some example data from `config.ini` to play around with. Use it with `.generate` instead of your own prompt to test it out.
 ```js
-scrapegen.generate( scrapegen.exampleData )
+let link = await scrapegen.generate( scrapegen.exampleData )
 ```
 
 <br>
@@ -103,7 +103,8 @@ const scrapegen = require('scrapegen');
 
 async function getImage() {
 
-    await scrapegen.generate_from_configini('./custom_config.ini', ( link => console.log(`Generated Image: ${link}`)) );
+    let image_link = await scrapegen.generate_from_configini('./custom_config.ini');
+    console.log(`Generated image: ${image_link}`);
 
 }
 
