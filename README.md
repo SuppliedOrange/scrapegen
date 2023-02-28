@@ -30,7 +30,7 @@ An asynchronous function that returns the image link once done processing. You c
 
 
 ```js
-// Returns a promise! You need to await if you wanna capture the data.
+// Returns a promise (the link as a string)! You need to await if you wanna capture the data.
 scrapegen.generate({
     prompt: "Japanese Woman",
     model: 'PhotoReal',
@@ -40,7 +40,7 @@ scrapegen.generate({
     face_enhance: 'Normal',
     upscale_and_enhance: '1MP',
     follow_model_style: 'true'
-
+    
 }, callback = (link => console.log(`Generated image: ${link}`) ))
 
 ```
@@ -50,7 +50,8 @@ An asynchronous function like the one above that generates an image based on a p
 
 ```js
 async function getImage() {
-    await scrapegen.generate_from_configini('path/to/config.ini', ( link => console.log(`Generated Image: ${link}`)) );
+    let image_link = await scrapegen.generate_from_configini('path/to/config.ini');
+    console.log(link) // Log the image link
 }
 
 ( async () => await getImage() )()
@@ -103,8 +104,7 @@ const scrapegen = require('scrapegen');
 
 async function getImage() {
 
-    let image_link = await scrapegen.generate_from_configini('./custom_config.ini');
-    console.log(`Generated image: ${image_link}`);
+    await scrapegen.generate_from_configini('./custom_config.ini', ( link => console.log(`Generated Image: ${link}`)) );
 
 }
 
