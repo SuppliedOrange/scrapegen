@@ -1,6 +1,6 @@
 {
   "name": "scrapegen",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "description": "A webscraper for a deep dream generator website for unlimited free text2img conversions :)",
   "main": "scrapegen.js",
   "scripts": {

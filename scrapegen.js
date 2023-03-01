@@ -3,9 +3,10 @@ const configIni = require('config.ini');
 const exampleData = configIni.load('./config.ini').Generator;
 
 async function generate ( config, callback = null ) {
-    
-    if (callback) await callback(await webscraper.generate_image(config));
-    return await webscraper.generate_image(config);
+
+    let webscraped_link = await webscraper(config);
+    if (callback) await callback(webscraped_link);
+    return webscraped_link;
 
 }
 

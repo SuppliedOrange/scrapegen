@@ -86,6 +86,9 @@ const generate_image = (async (generation) => {
 
     await page.waitForSelector('.top-dreamers-btn', { visible: true, timeout: 30000 });
 
+    link = ''
+    status = { success: false, tries: 0, error: 'Out of tries' }
+
     while (!link) {
 
         status.tries++; // Increase number of tries, see if we've got the message
@@ -202,7 +205,7 @@ const generate_image = (async (generation) => {
 
     // console.log(image_link);
 
-    // await browser.close();
+    await browser.close();
 
     return image_link
 
