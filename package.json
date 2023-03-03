@@ -1,6 +1,6 @@
 {
   "name": "scrapegen",
-  "version": "1.0.73",
+  "version": "1.0.75",
   "description": "A webscraper for a deep dream generator website for unlimited free text2img conversions :)",
   "main": "scrapegen.js",
   "scripts": {
@@ -28,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/SuppliedOrange/scrapegen/issues"
   },
-  "homepage": "https://github.com/SuppliedOrange/scrapegen#readme"
+  "homepage": "https://github.com/SuppliedOrange/scrapegen#readme",
+  "dependencies": {
+    "config.ini": "^0.0.60",
+    "node-temp-mail": "^1.0.2",
+    "puppeteer": "^19.7.2",
+    "unique-username-generator": "^1.1.3"
+  }
 }

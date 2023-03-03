@@ -108,8 +108,8 @@ async function getImage() {
 
 }
 
-console.log("Generating image...")
-( async () => await getImage() )()
+console.log("Generating image...");
+( async () => await getImage() )();
 
 ```
 
