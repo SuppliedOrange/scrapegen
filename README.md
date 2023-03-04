@@ -123,7 +123,7 @@ console.log("Generating image...");
 ![Emma watson animated](https://i.imgur.com/L7tLkpg.jpg)
 ![Mona Lisa Cyberpunk](https://i.imgur.com/bIVBJKW.png)
 ![Japanese girl in pink sweater](https://i.imgur.com/G3YPhp8.jpg)
-![Selena Gomez in white gown](https://imgur.com/a/8ZGTo6T)
+![Selena Gomez in white gown](https://i.imgur.com/S07u2eA.jpg)
 
 
 <br>
